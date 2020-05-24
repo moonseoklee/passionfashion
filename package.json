@@ -19,6 +19,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
+  "proxy": "http://localhost:4000/",
   "scripts": {
     "start": "npm-run-all --parallel start:**",
     "start:client": "react-scripts start",

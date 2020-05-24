@@ -13,9 +13,10 @@ app.use('/', express.static(__dirname + '/'));
 app.use(bodyParser.json());
 app.use('/api', route);
 
+console.log(__dirname);
 
 app.get('*', function(_, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
+    res.sendFile(path.join(__dirname, '../public'), function(err) {
       if (err) {
         res.status(500).send(err)
       }
