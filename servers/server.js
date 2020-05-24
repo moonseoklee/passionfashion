@@ -14,13 +14,6 @@ app.use(bodyParser.json());
 app.use('/api', route);
 
 
-app.get('*', function(_, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
-      if (err) {
-        res.status(500).send(err)
-      }
-    })
-  })
 
 app.listen(port, ()=>{
     console.log(`express is running on ${port}`);
