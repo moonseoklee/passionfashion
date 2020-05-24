@@ -8,21 +8,16 @@ const path = require('path');
 
 // app.use(cors());
 
-
-app.use('/', express.static(__dirname + 'build'));
+app.use(express.static(__dirname));
+app.use(express.static(__dirname + 'build'));
 app.use(bodyParser.json());
 app.use('/api', route);
 
 console.log(__dirname);
 
-app.get('*', function(_, res) {
-    res.sendFile(path.join(__dirname, 'build/index.html'), function(err) {
-      if (err) {
-        res.status(500).send(err)
-      }
-    })
-  })
-
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.listen(port, ()=>{
     console.log(`express is running on ${port}`);
 })
