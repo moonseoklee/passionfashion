@@ -19,11 +19,11 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "proxy": "http://localhost:4000/",
+  "proxy": "http://localhost:5000/",
   "scripts": {
     "start": "npm-run-all --parallel start:**",
     "start:client": "react-scripts start",
-    "start:server": "node ./servers/server.js",
+    "start:server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
