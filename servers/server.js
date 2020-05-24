@@ -4,6 +4,7 @@ const route = require('./routes/index')
 // const cors = require('cors');
 const bodyParser = require('body-parser');
 const port =process.env.PORT || 3001;
+const path = require('path');
 
 // app.use(cors());
 
