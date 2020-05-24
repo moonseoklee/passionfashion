@@ -11,6 +11,7 @@ const path = require('path');
 app.use(bodyParser.json());
 app.use('/api', route);
 
+
 app.get('*', function(_, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
       if (err) {
