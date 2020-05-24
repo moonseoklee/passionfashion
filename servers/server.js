@@ -9,9 +9,7 @@ const port =process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 app.use('/api', route);
-app.get('/', function (req, res) {
-    res.sendfile(__dirname + '/index.html');
-  });
+
 app.listen(port, ()=>{
     console.log(`express is running on ${port}`);
 })
