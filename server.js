@@ -9,7 +9,7 @@ const path = require('path');
 // app.use(cors());
 
 
-app.use('/', express.static(__dirname + 'build'));
+app.use('/', express.static(__dirname + 'build/static'));
 app.use(bodyParser.json());
 app.use('/api', route);
 
